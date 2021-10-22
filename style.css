@@ -14,6 +14,45 @@
     margin-top: 80px;
 }
 
+.table-container {
+  margin-top: 50px;
+  width: 80%;
+  max-width: 1200px
+}
+
+.box {
+  width: 80px;
+  height: 30px;
+}
+
+.car-div {
+  width: fit-content;
+}
+
+#content {
+  display: flex;
+}
+
+#button_car {
+  width: 20%;
+  min-width: 100px;
+}
+
+#car {
+  margin-top: 50px;
+}
+
+#btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 100px;
+}
+
+.left-btn {
+  width: 80px;
+}
+
 @media (max-width: 450px) {
   .h-custom {
     height: 100%;
