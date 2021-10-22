@@ -5,11 +5,21 @@
   height: 1px;
   background: #eee;
 }
+
 .h-custom {
   height: calc(100% - 73px);
 }
+
+.form-container {
+    margin-top: 80px;
+}
+
 @media (max-width: 450px) {
   .h-custom {
     height: 100%;
   }
+
+  .form-container {
+    margin-top: 0;
+}
 }
