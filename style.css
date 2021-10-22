@@ -1,25 +1,17 @@
-.divider:after,
-.divider:before {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #eee;
-}
-
-.h-custom {
-  height: calc(100% - 73px);
-}
-
-.form-container {
-    margin-top: 80px;
-}
-
-.table-container {
+.my-container {
   margin-top: 50px;
   width: 80%;
   max-width: 1200px
 }
 
+/* Form */
+#main-form {
+  margin-top: 75px;
+  width: 50%;
+  min-width: 250px;
+}
+
+/* Table */
 .box {
   width: 80px;
   height: 30px;
@@ -51,14 +43,4 @@
 
 .left-btn {
   width: 80px;
-}
-
-@media (max-width: 450px) {
-  .h-custom {
-    height: 100%;
-  }
-
-  .form-container {
-    margin-top: 0;
-}
 }
