@@ -1,19 +1,15 @@
 .my-container {
-  margin-top: 50px;
   width: 80%;
   max-width: 1400px;
   border-style: solid;
-  height: 50%;
-  min-height: 380px;
   justify-content: center;
 }
 
 .body-container {
-  display: flex;
-  align-items: center;
+  margin-top: 100px;
 }
 
-/* Form */
+/* Login */
 #main-form {
   margin-top: 40px;
   width: 50%;
@@ -21,7 +17,16 @@
   max-width: 300px;
 }
 
+#login-container {
+  min-height: 380px;
+  height: 50%;
+}
+
 /* Table */
+#table-container {
+  padding: 2.5%;
+}
+
 .box {
   width: 80px;
   height: 30px;
@@ -35,12 +40,19 @@
   display: flex;
 }
 
-#button_car {
-  width: 20%;
-  min-width: 100px;
+#table {
+  width: 100%;
+  text-align: center;
 }
 
-#car {
+#button_car {
+  width: 20%;
+  min-width: 125px;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
   margin-top: 50px;
 }
 
@@ -48,9 +60,35 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 100px;
 }
 
 .left-btn {
   width: 80px;
+}
+
+/* Graph */
+#graph-container {
+  padding: 2.5%;
+  max-width: 1113px;
+}
+
+/* Utilities */
+.bg-blue {
+  background-color: #8fabdd;
+}
+
+.bg-green {
+  background-color: #a8d18d;
+}
+
+.bg-yellow {
+  background-color: #ffff01;
+}
+
+.bg-gray {
+  background-color: #343a40;
+}
+
+.border-dark {
+  border-color: #000000;
 }

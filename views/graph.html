@@ -9,23 +9,21 @@
   <link rel="stylesheet" href="./css/style.css">
   <title>Graph</title>
 </head>
-<body>
-  <main class="vh-100">
-    <div class="container-fluid h-custom my-container">
-      <header class="d-flex justify-content-between mb-2">
-        <section class="logo">
-          <img src="../assets/twitter-logo.svg" alt="logo_twitter">
-        </section>
-        <div id="current_date" class="btn btn-secondary border border-dark">
-          22/10/2021
-        </div>
-      </header>
-
-      <div id="content">
-        <canvas id="myChart" class="mt-4"></canvas>
-      </div>
+<body class="vh-100 body-container">
+<div id="graph-container" class="container-fluid h-custom my-container">
+    <header class="d-flex justify-content-between mb-2">
+    <section class="logo">
+        <img src="../assets/twitter-logo.svg" alt="logo_twitter">
+    </section>
+    <div id="current_date" class="btn btn-secondary border border-dark">
+        22/10/2021
     </div>
-  </main>
+    </header>
+
+    <div id="graph">
+        <canvas id="myChart" class="mt-4"></canvas>
+    </div>
+</div>
 </body>
 <script src="./js/graph.js"></script>
 </html>

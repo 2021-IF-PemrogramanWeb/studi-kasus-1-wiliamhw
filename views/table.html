@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Table</title>
-</head>
-<body>
-  <main class="vh-100">
-    <div class="container-fluid h-custom my-container">
-      <header class="d-flex justify-content-between mb-2">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Table</title>
+  </head>
+  <body class="vh-100 body-container">
+    <div id="table-container" class="container-fluid h-custom my-container">
+      <header class="d-flex justify-content-between mb-4">
         <section class="logo">
-          <img src="../assets/twitter-logo.svg" alt="logo_twitter">
+          <img src="../assets/twitter-logo.svg" alt="logo_twitter" />
         </section>
         <div id="current_date" class="btn btn-secondary border border-dark">
           22/10/2021
@@ -24,24 +28,26 @@
         <section id="button_car">
           <div id="car">
             <div class="car-div">
-              <div class="btn btn-info box"></div>
+              <div class="rounded box bg-blue"></div>
               <div class="text-center">Mobil 1</div>
             </div>
             <div class="car-div">
-              <div class="btn btn-success box"></div>
+              <div class="rounded box bg-green"></div>
               <div class="text-center">Mobil 2</div>
             </div>
           </div>
           <div id="btn">
             <button class="btn btn-warning text-dark left-btn">Graph</button>
-            <button class="btn btn btn-info text-dark left-btn">Export</button>
+            <button class="btn btn btn-info text-dark left-btn">
+              Export
+            </button>
             <button class="btn btn-danger text-dark left-btn">Logout</button>
           </div>
         </section>
-        
+
         <section id="table">
-          <table class="table">
-            <thead class="thead-dark">
+          <table class="table table-bordered">
+            <thead class="bg-green">
               <tr>
                 <th scope="col">No</th>
                 <th scope="col">On</th>
@@ -57,30 +63,29 @@
                 <td>Kamis, 25/02/2021, 21:00:50</td>
                 <td>
                   Act: Audiyatra
-                  <br>
+                  <br />
                   Dis: Rizaldy, Gathot
                 </td>
-                <td>1. Interlock Hose Reel Front</td>
+                <td class="text-left">1. Interlock Hose Reel Front</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
                 <td>Lorem ipsum dolor sit amet,</td>
                 <td>Lorem ipsum dolor sit amet,</td>
                 <td>Lorem ipsum dolor sit amet,</td>
-                <td>Lorem ipsum dolor sit amet,</td>
+                <td class="text-left">Lorem ipsum dolor sit amet,</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
                 <td>Lorem ipsum dolor sit amet,</td>
                 <td>Lorem ipsum dolor sit amet,</td>
                 <td>Lorem ipsum dolor sit amet,</td>
-                <td>Lorem ipsum dolor sit amet,</td>
+                <td class="text-left">Lorem ipsum dolor sit amet,</td>
               </tr>
             </tbody>
           </table>
         </section>
       </div>
     </div>
-  </main>
-</body>
+  </body>
 </html>
