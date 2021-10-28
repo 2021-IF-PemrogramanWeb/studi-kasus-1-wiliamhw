@@ -3,7 +3,7 @@
 server with default setting (user 'root' with no password) */
 $config = [
     'database' => [
-        'name' => 'pendaftaran_siswa',
+        'name' => 'pweb-1',
         'username' => 'root',
         'password' => '',
         'connection' => 'localhost',

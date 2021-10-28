@@ -1,3 +1,8 @@
+<?php
+require_once "database/connection.php";
+require "controllers/RestrictAccess.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,17 +15,17 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/views/css/style.css" />
     <title>Table</title>
   </head>
   <body class="vh-100 body-container">
     <div id="table-container" class="container-fluid h-custom my-container">
       <header class="d-flex justify-content-between mb-4">
         <section class="logo">
-          <img src="../assets/twitter-logo.svg" alt="logo_twitter" />
+          <img src="/assets/twitter-logo.svg" alt="logo_twitter" />
         </section>
         <div id="current_date" class="btn btn-secondary border border-dark">
-          22/10/2021
+          <?php echo date('d/m/Y'); ?>
         </div>
       </header>
 
@@ -37,11 +42,15 @@
             </div>
           </div>
           <div id="btn">
-            <button class="btn btn-warning text-dark left-btn">Graph</button>
+            <a href="/graph" class="btn btn-warning text-dark left-btn">
+              Graph
+            </a>
             <button class="btn btn btn-info text-dark left-btn">
               Export
             </button>
-            <button class="btn btn-danger text-dark left-btn">Logout</button>
+            <a href="/logout" class="btn btn-danger text-dark left-btn">
+              Logout
+            </a>
           </div>
         </section>
 
@@ -57,31 +66,23 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Kamis, 25/02/2021, 19:41:50</td>
-                <td>Kamis, 25/02/2021, 21:00:50</td>
-                <td>
-                  Act: Audiyatra
-                  <br />
-                  Dis: Rizaldy, Gathot
-                </td>
-                <td class="text-left">1. Interlock Hose Reel Front</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Lorem ipsum dolor sit amet,</td>
-                <td>Lorem ipsum dolor sit amet,</td>
-                <td>Lorem ipsum dolor sit amet,</td>
-                <td class="text-left">Lorem ipsum dolor sit amet,</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Lorem ipsum dolor sit amet,</td>
-                <td>Lorem ipsum dolor sit amet,</td>
-                <td>Lorem ipsum dolor sit amet,</td>
-                <td class="text-left">Lorem ipsum dolor sit amet,</td>
-              </tr>
+            <?php
+              $query = "SELECT * FROM logs";
+              $stmt = $mysqli->query($query);
+              $counter = 1;
+
+              while ($log = $stmt->fetch_array()) {
+                  echo "<tr>";
+
+                  echo "<td>" . $counter++ . "</td>";
+                  echo "<td>" . $log['on'] . "</td>";
+                  echo "<td>" . $log['off'] . "</td>";
+                  echo "<td>" . $log['act_by'] . "</td>";
+                  echo "<td class=\"text-left\">" . $log['reason'] . "</td>";
+
+                  echo "</tr>";
+              }
+              ?>
             </tbody>
           </table>
         </section>

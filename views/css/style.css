@@ -59,7 +59,7 @@
 #btn {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .left-btn {
@@ -91,4 +91,9 @@
 
 .border-dark {
   border-color: #000000;
+}
+
+.help-block {
+  color:red;
+  font-size: 14px;
 }
