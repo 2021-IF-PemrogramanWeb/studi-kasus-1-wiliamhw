@@ -23,7 +23,7 @@ require "controllers/LoginController.php";
         <main id="main-form" class="text-center">
             <form id="form-div" action="login" method="POST">
                 <div class="form-group">
-                    <label for="username">User</label>
+                    <label for="username">Username</label>
                     <input type="username" class="form-control" id="username" name="username">
                     <?php if ($username_err != "") { ?>
                         <div class="help-block">

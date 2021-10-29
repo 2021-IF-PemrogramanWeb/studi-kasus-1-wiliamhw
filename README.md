@@ -12,3 +12,6 @@ Jika pengguna sudah login, maka pengguna langsung diarahkan ke URI `/table`.
 1. Import `pweb-1.sql` ke database MySQL local.
 2. Pada folder `database`, copy file `config.example.php` menjadi `config.php`.
 3. Isi file `config.php` sesuai dengan konfigurasi database.
+
+## Link Website
+https://pweb-f-0087.000webhostapp.com/
