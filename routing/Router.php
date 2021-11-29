@@ -19,5 +19,8 @@ class Router {
         if (array_key_exists($uri, $this->routes)) {
             return $this->routes[$uri];
         }
+        echo('<h1>404 - Route not found</h1>');
+        http_response_code(404);
+        die();
     }
 }

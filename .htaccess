@@ -1,5 +1,10 @@
 RewriteEngine On
+
+<Files ~ "\.md|\.sql$">  
+    Deny from All
+</Files>
+RedirectMatch 403 /\..*$
+Options -Indexes
+
 RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ index.php [QSA,L]
